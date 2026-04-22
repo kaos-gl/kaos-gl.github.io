@@ -1,1 +1,6 @@
-<p>interests works!</p>
+<h2 class="titulo-musk">Interests</h2>
+<ul style="list-style-type: square; padding-left: 20px;">
+  <li *ngFor="let item of interestsList">
+    {{ item.name }}
+  </li>
+</ul>

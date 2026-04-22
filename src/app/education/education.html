@@ -1,1 +1,8 @@
-<p>education works!</p>
+<h2 class="titulo-musk">Education</h2>
+<ul style="list-style-type: none; padding: 0;">
+  <li *ngFor="let edu of educationList" style="margin-bottom: 15px;">
+    <strong style="font-size: 16px;">{{edu.degree}}</strong> <br>
+    <span>{{edu.university}}</span> <br>
+    <small>{{edu.startDate}} - {{edu.endDate}}</small>
+  </li>
+</ul>

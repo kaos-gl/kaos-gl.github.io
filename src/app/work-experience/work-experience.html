@@ -1,1 +1,9 @@
-<p>work-experience works!</p>
+<h2 class="titulo-musk">Work Experience</h2>
+<ul *ngFor="let job of workExperienceList" style="list-style-type: none; padding: 0; margin-bottom: 15px;">
+  <li>
+    <strong style="font-size: 18px;">{{ job.position }}</strong> <br>
+    <strong>{{ job.company }}</strong> | <i>{{job.location}}</i> <br>
+    <small>{{ job.startDate }} - {{ job.endDate }}</small> <br>
+    <p style="margin-top: 5px; font-size: 14px;">{{ job.accomplishments }}</p>
+  </li>
+</ul>

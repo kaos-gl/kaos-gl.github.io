@@ -1,1 +1,7 @@
-<p>certificates works!</p>
+<h2 class="titulo-musk">Achievements & Certificates</h2>
+<ul style="list-style-type: none; padding: 0;">
+  <li *ngFor="let cert of certificatesList" style="margin-bottom: 12px;">
+    <strong style="font-size: 15px;">{{cert.title}} ({{cert.year}})</strong> <br>
+    <small>{{cert.Description}}</small>
+  </li>
+</ul>
