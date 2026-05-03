@@ -1,9 +1,18 @@
 <h2 class="titulo-musk">Work Experience</h2>
-<ul style="list-style-type: none; padding: 0; margin-bottom: 25px;">
-  <li *ngFor="let job of workExperienceList" style="margin-bottom: 20px;">
-    <div class="musk-fecha">{{ job.startDate }} - {{ job.endDate }}</div>
-    <div class="musk-puesto">{{ job.position }}</div>
-    <div class="musk-empresa">{{ job.company }} <span style="font-weight: normal; font-style: italic; color: #888;">| {{job.location}}</span></div>
-    <p style="margin-top: 5px; font-size: 14px; line-height: 1.5;">{{ job.accomplishments }}</p>
-  </li>
-</ul>
+<div *ngFor="let job of workExperienceList" style="margin-bottom: 25px; position: relative; padding-left: 15px;">
+  
+  <!-- Fecha y Ubicación -->
+  <div style="display: flex; justify-content: space-between; font-size: 11px; font-weight: bold; margin-bottom: 4px;">
+    <span class="texto-azul">{{ job.startDate }} - {{ job.endDate }}</span>
+    <span class="texto-azul">{{job.location}}</span>
+  </div>
+
+  <!-- El rectangulito azul al lado del título -->
+  <div style="position: absolute; left: 0; top: 15px; width: 6px; height: 18px; background-color: #1a73e8;"></div>
+  
+  <div class="fw-black" style="font-size: 16px; color: #111;">{{ job.position }}</div>
+  <div style="font-size: 14px; color: #555; margin-bottom: 6px;">{{ job.company }}</div>
+  
+  <div class="texto-azul" style="font-size: 11px; font-style: italic; margin-bottom: 2px;">Accomplishments</div>
+  <p style="margin: 0; font-size: 12px; line-height: 1.5; color: #444; text-align: justify;">{{ job.accomplishments }}</p>
+</div>

@@ -1,17 +1,25 @@
-<table style="width: 100%; margin-bottom: 20px;">
-  <tr>
-    <td style="width: 33%; text-align: left; vertical-align: middle;">
-      <h1 style="font-size: 32px; font-weight: bold; margin: 0;">{{header.name}}</h1>
-      <p style="font-style: italic; margin-top: 5px;">{{header.goalLife}}</p>
-    </td>
-    <td style="width: 33%; text-align: center; vertical-align: middle;">
-      <img *ngIf="header.photoURL" src="{{header.photoURL}}" width="150" height="150" style="border-radius: 50%; object-fit: cover; border: 2px solid black;">
-    </td>
-    <td style="width: 33%; text-align: right; vertical-align: middle; line-height: 1.6;">
-      Email: {{header.email}} <br>
-      Tel: {{header.phoneNumber}} <br>
-      Ubicación: {{header.location}} <br>
-      Redes: {{header.socialNetwork}}
-    </td>
-  </tr>
-</table>
+<div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 30px;">
+  <!-- Izquierda: Nombre y Descripción -->
+  <div style="flex: 1; padding-right: 20px;">
+    <div style="display: flex; align-items: center; margin-bottom: 10px;">
+      <div style="width: 15px; height: 35px; background-color: #2c3e50; margin-right: 12px;"></div>
+      <h1 style="margin: 0; font-size: 38px; font-weight: 900; color: #2c3e50; line-height: 1;">{{header.name}}</h1>
+    </div>
+    <p style="font-size: 13px; color: #444; text-align: justify; line-height: 1.5; margin-top: 15px;">
+      {{header.goalLife}}
+    </p>
+  </div>
+
+  <!-- Centro: Foto -->
+  <div style="flex: 0 0 130px; text-align: center;">
+    <img *ngIf="header.photoURL" [src]="header.photoURL" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 3px solid #eee; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  </div>
+
+  <!-- Derecha: Datos de contacto -->
+  <div style="flex: 1; text-align: right; padding-left: 20px; font-size: 12px; line-height: 1.8; color: #333;">
+    <div>{{header.email}} <span class="texto-azul fw-black">&#9993;</span></div>
+    <div>{{header.phoneNumber}} <span class="texto-azul fw-black">&#128222;</span></div>
+    <div>{{header.location}} <span class="texto-azul fw-black">&#128205;</span></div>
+    <div>{{header.socialNetwork}} <span class="texto-azul fw-black">&#128279;</span></div>
+  </div>
+</div>

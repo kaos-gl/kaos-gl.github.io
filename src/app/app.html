@@ -1,34 +1,19 @@
-<table border="1">
-  <tr>
-    <td colspan="2">
-      <app-header></app-header>
-    </td>
-  </tr>
-
-  <tr>
-    <td>
+<div class="hoja-cv">
+  <app-header></app-header>
+  
+  <div class="cv-grid">
+    <!-- Columna Izquierda (Experiencia y Educación) -->
+    <div class="col-izq">
       <app-work-experience></app-work-experience>
-    </td>
-    <td>
-      <app-skills></app-skills>
-    </td>
-  </tr>
-
-  <tr>
-    <td>
       <app-education></app-education>
-    </td>
-    <td>
-      <app-certificates></app-certificates>
-    </td>
-  </tr>
+    </div>
 
-  <tr>
-    <td>
+    <!-- Columna Derecha (Habilidades, Certificados, etc.) -->
+    <div class="col-der">
+      <app-skills></app-skills>
+      <app-certificates></app-certificates>
       <app-languages></app-languages>
-    </td>
-    <td>
       <app-interests></app-interests>
-    </td>
-  </tr>
-</table>
+    </div>
+  </div>
+</div>

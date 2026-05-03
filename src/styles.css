@@ -1,48 +1,42 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap');
 
 body {
   font-family: 'Lato', sans-serif;
-  color: #333333;
+  background-color: #cbd5e1; /* Fondo gris tipo escritorio */
   margin: 0;
-  padding: 20px;
+  padding: 40px 20px; /* Espacio arriba y abajo para que la hoja no pegue al techo */
 }
 
-/* Magia para desaparecer las líneas negras de las tablas */
-table {
-  border-collapse: collapse;
-  width: 100%;
-}
-td, th {
-  border: none !important; 
-  vertical-align: top;
+/* --- LA MAGIA: Formato tamaño carta (A4) --- */
+.hoja-cv {
+  background-color: white;
+  max-width: 850px; /* Ancho exacto para que no se vea estirado */
+  margin: 0 auto; /* Lo centra en la pantalla */
+  padding: 50px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2); /* Sombra elegante */
+  box-sizing: border-box;
 }
 
+/* --- Títulos estilo Musk --- */
 .titulo-musk {
   font-size: 20px;
-  font-weight: 900;
-  text-transform: uppercase;
-  margin-top: 20px;
-  margin-bottom: 10px;
-  border-bottom: 2px solid #333;
-  padding-bottom: 3px;
-}
-
-/* --- EL TOQUE AZUL MUSK --- */
-.musk-fecha {
-  color: #1a73e8; /* Azul tecnológico */
-  font-size: 12px;
-  font-weight: bold;
-  margin-bottom: 2px;
-}
-
-.musk-puesto {
-  font-size: 18px;
-  font-weight: 900;
+  font-weight: 700;
   color: #111;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  text-transform: capitalize;
 }
 
-.musk-empresa {
-  font-size: 16px;
-  font-weight: bold;
-  color: #444;
+/* --- Sistema de Columnas --- */
+.cv-grid {
+  display: flex;
+  gap: 35px; /* Separación entre la izquierda y la derecha */
 }
+.col-izq { width: 60%; }
+.col-der { width: 40%; }
+
+/* Utilidades de texto */
+.texto-azul { color: #1a73e8; }
+.fw-black { font-weight: 900; }
