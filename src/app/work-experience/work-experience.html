@@ -6,7 +6,6 @@
     <span class="texto-azul">{{ job.startDate }} - {{ job.endDate }}</span>
     <span class="texto-azul">{{job.location}}</span>
   </div>
-
   <!-- El rectangulito azul al lado del título -->
   <div style="position: absolute; left: 0; top: 15px; width: 6px; height: 18px; background-color: #1a73e8;"></div>
   
@@ -14,5 +13,7 @@
   <div style="font-size: 14px; color: #555; margin-bottom: 6px;">{{ job.company }}</div>
   
   <div class="texto-azul" style="font-size: 11px; font-style: italic; margin-bottom: 2px;">Accomplishments</div>
-  <p style="margin: 0; font-size: 12px; line-height: 1.5; color: #444; text-align: justify;">{{ job.accomplishments }}</p>
+  <ul style="margin: 0; padding-left: 16px; font-size: 12px; line-height: 1.8; color: #444;">
+    <li *ngFor="let item of job.accomplishments">{{ item }}</li>
+  </ul>
 </div>
