@@ -3,4 +3,5 @@ export class Certificate {
   Description?: string = ''; 
   title?: string = '';
   year?: string = '';
+  imagenUrl?: string = ''; // ¡ESTE ES EL CAMPO MÁGICO QUE FALTABA!
 }
