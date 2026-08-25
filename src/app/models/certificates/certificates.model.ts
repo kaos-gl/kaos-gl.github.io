@@ -1,7 +1,18 @@
-export class Certificate {
-  id?: string;
-  Description?: string = ''; 
-  title?: string = '';
-  year?: string = '';
-  imagenUrl?: string = ''; // ¡ESTE ES EL CAMPO MÁGICO QUE FALTABA!
-}
+<h2 class="titulo-musk">Achievements & Certificates</h2>
+<ul style="list-style-type: none; padding: 0;">
+  <li *ngFor="let cert of certificatesList" style="margin-bottom: 24px;">
+    <strong style="font-size: 15px;">{{cert.title}} ({{cert.year}})</strong> <br>
+    <small>{{cert.Description}}</small>
+    
+    <!-- ¡Línea para depurar! -->
+    <pre style="background: #eee; padding: 10px; font-size: 12px;">{{ cert | json }}</pre>
+    
+    <div *ngIf="cert.imagenUrl" style="margin-top: 10px;">
+      <img 
+        [src]="cert.imagenUrl" 
+        alt="Certificado de {{cert.title}}" 
+        style="max-width: 100%; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"
+      >
+    </div>
+  </li>
+</ul>
