@@ -2,7 +2,7 @@
 
 body {
   font-family: 'Lato', sans-serif;
-  background-color: #cbd5e1; /* Fondo gris tipo escritorio */
+  background-color: #27A3F5; /* Fondo gris tipo escritorio */
   margin: 0;
   padding: 40px 20px; /* Espacio arriba y abajo para que la hoja no pegue al techo */
 }
@@ -38,5 +38,5 @@ body {
 .col-der { width: 40%; }
 
 /* Utilidades de texto */
-.texto-azul { color: #1a73e8; }
+.texto-azul { color:#63C287; }
 .fw-black { font-weight: 900; }

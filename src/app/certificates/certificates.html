@@ -4,12 +4,16 @@
     <strong style="font-size: 15px;">{{cert.title}} ({{cert.year}})</strong> <br>
     <small>{{cert.Description}}</small>
     
-    <div *ngIf="cert.imagenUrl" style="margin-top: 10px;">
-      <img 
-        [src]="cert.imagenUrl" 
-        alt="Certificado de {{cert.title}}" 
-        style="max-width: 100%; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"
+    <!-- Aquí cambiamos la imagen por un link -->
+    <div *ngIf="cert.imagenUrl" style="margin-top: 8px;">
+      <a 
+        [href]="cert.imagenUrl" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        style="color: #007bff; text-decoration: none; font-weight: bold; font-size: 14px;"
       >
+        Ver Certificado 🔗
+      </a>
     </div>
   </li>
 </ul>
